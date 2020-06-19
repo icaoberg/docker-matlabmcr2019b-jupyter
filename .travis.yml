@@ -1,0 +1,15 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+# whitelist
+branches:
+  only:
+    - master
+
+script:
+  - bash ./build.sh
+  - docker images
